@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../ticket.css">
+    <title>View Tickets</title>
+</head>
+
+<body>
+
+    <div class="container active">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="/asset/images/MEMEORBIT LOGO_122256.png">
+                    <h2>Meme<span class="danger">-Orbit</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="/index.html" class="active">
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span class="material-icons-sharp">event_note</span><h3>Manage plans</h3>
+                    </div>
+                    
+                    
+                    <div class="accordion-content">
+                        <a href="add-plan.html">Add Plan</a>
+                        <a href="remove-plan.html">Remove Plan</a>
+                        <a href="adjust-plan.html">Adjust Plan</a>
+                    </div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span class="material-icons-sharp">
+                            person_outline
+                        </span>
+                        <h3>Manage Users</h3>
+                    </div>
+                    <div class="accordion-content">
+                        <a href="./all-users.html">All Users</a>
+                        <a href="./active-users.html">Active Users</a>
+                        <a href="./deactivate-user.html">Deactivate User</a>
+                    </div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span class="material-icons-sharp">
+                            account_balance
+                        </span>
+                        
+                        <h3>Deposit Trans</h3>
+                    </div>
+                    <div class="accordion-content">
+                        <a href="./pending-deposit.html">Pending Deposits</a>
+                        <a href="./approved-depo.html">Approved Deposit</a>
+                        <a href="./all-deposits.html">All Deposits</a>
+                    </div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span class="material-icons-sharp">
+                            account_balance_wallet
+                        </span>                        
+                        <h3>Withdraw Trans</h3>
+                    </div>
+                    <div class="accordion-content">
+                        <a href="./pending-withdrawal.html">Pending Withdrawals</a>
+                        <a href="./approved-with.html">Approved Withdrawal</a>
+                        <a href="./all-withdrawals.html">All Withdrawals</a>
+                    </div>
+                </div>
+
+                <a href="#" class="">
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                    <h3>Analytics</h3>
+                </a>
+   
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span class="material-icons-sharp">mail_outline</span>
+                        <h3>Tickets</h3>
+                        <span class="message-count">27</span>
+                    </div>
+                    <div class="accordion-content">
+                        <a href="./allticket.html">All Tickets</a>
+                        <a href="./unresolved-ticket.html">Unresolved Tickets</a>
+                        <a href="./resolved-ticket.html">Resolved Tickets</a>
+                    </div>
+                </div>
+
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Sale List</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        report_gmailerrorred
+                    </span>
+                    <h3>Reports</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        settings
+                    </span>
+                    <h3>Settings</h3>
+                </a>
+        
+                <a href="#" class="logout">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <section class="section">
+                <div class="section-header d-flex justify-content-between">
+                    <h1>Support ticket discussion</h1>
+                    <a href="../html/allticket.html"><button class="btn btn-primary">
+                        <span class="material-icons-sharp">arrow_back</span> 
+                    </button></a>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card card-wrapper">
+                            <div class="card-header">
+                                <div class="project-status-top">
+                                    <h6 class="project-status-heading"> Customer: Prince Tuga
+                                    </h6>
+                                    <h6 class="project-status-heading"> Ticket#2025</h6>
+                                    <h6 class="project-status-heading"> Subject: Pending withdraw</h6>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <form action="" enctype="multipart/form-data" method="post">
+                                    <input type="hidden" name="_token" value="">
+                                    <div class="row justify-content-md-between">
+                                        <div class="col-md-4">
+                                            <div id="image-preview" class="image-preview">
+                                                <label for="image-upload" id="image-label">Choose file</label>
+                                                <input type="file" name="image" id="image-upload" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12 mt-3">
+                                            <div class="form-group ticket-comment-box">
+                                                <input type="hidden" name="ticket_id" value="6">
+                                                <label class="message">Message</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-8">
+                                            <div class="form-group">
+                                                <button type="submit" class="btn cms-submit"><i
+                                                class="fas fa-reply"> </i> Reply</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list-group">
+                    <div class="card">
+                        <div class="card-header  bg-success ">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="text-white">Reply from - Prince Tuga
+                                </h6>
+                                <small class="text-white">2 days ago</small>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="mb-1">
+                                Hello I was trying to transfer my usd to usdt wallet but its does&#039;t work, its suspended.. How much time will i wait?
+                            </p>
+                            <div class="gallery">
+                                <div class="gallery-item" data-image="" data-title="Image 1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Tuga</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="/asset/images/MEMEORBIT LOGO_122256.png">
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+
+            <div class="user-profile">
+                <div class="logo">
+                    <img src="/asset/images/MEMEORBIT LOGO_122256.png">
+                    <h2>By Tuga</h2>
+                    <p>Web Developer</p>
+                </div>
+            </div>
+
+            <div class="reminders">
+
+                <div class="header">
+                    <h2>Reminders</h2>
+                    <span class="material-icons-sharp">
+                        notifications_none
+                    </span>
+                </div>
+
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp notification-icon">
+                            notifications_none
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Incoming notification</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp more-options" onclick="toggleDropupMenu()">
+                            more_vert
+                        </span>
+                        <!-- Drop-up Menu -->
+                        <div class="dropup-menu" id="dropupMenu">
+                            <ul>
+                                <a href="">
+                                    <li>Deposit of $1,000 from ahmed pablo</li>
+                                </a>
+                                <a href="">
+                                    <li>Withdrawal of $500 from prince tuga</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            volume_up
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Workshop</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            edit
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Workshop</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification add-reminder">
+                    <div>
+                        <span class="material-icons-sharp">
+                            add
+                        </span>
+                        <h3>Add Reminder</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="../general.js"></script>
+    <script src="../orders.js"></script>
+</body>
+
+</html>
